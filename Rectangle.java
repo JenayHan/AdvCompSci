@@ -1,57 +1,68 @@
-public class Rectangle {
-    private int length;
-    private int width;
+public class Rectangle extends Polygon{
+    private double length;
+    private double width;
 
-    public Rectangle() { //all class names must be capitalized
-        length = 3;
-        width = 5;
-    }
-
-    public Rectangle(int newLength, int newWidth){
-        length = newLength;
-        width = newWidth;
-    }   
-    
-    public int getLength(){
-        return length;
-    }
-    public int getWidth(){
-        return width;
-    }
-    public void setLength(int newLength){
-        length = newLength;
-    }
-    public void setWidth(int newWidth){
-        width = newWidth;
-    }
-
-    public int calculateArea(){
-        int area = length * width;
-        return area;
-    }
-    public int calculatePerimeter(){
-        int perimeter = 2 * (length + width);
-        return perimeter;
+    public Rectangle(int length, int width){
+        super(4);
+        if (length < 0){
+            this.length = 0;
+        }
+        else {
+            this.length = length;
+        }
+        
+        if (width < 0){
+            this.width = 0;
+        }
+        else {
+            this.width = width;
+        }
 
     }
-    public double calculateDiagonal(){
-        double sum = Math.sqrt(Math.pow(length, 2) + (Math.pow(width, 2)));
-        return sum;
-    }
-    public String toString(){
-        return "This rectangle has length " + length + " and width " + width;
-    }
-    public boolean equals(Rectangle other){
-        if (getLength() == other.getLength() 
-            && getWidth() == other.getWidth()) {
-            return true;
-    }
-            return false;
 
+    public Rectangle(){
+        this(4, 3);
+    }
+
+    public void setLength(int length){
+        if (length < 0){
+            this.length = 0;
+        }
+        else {
+            this.length = length;
+        }
+        
+    }
+    public void setWidth(int width){
+        if (width < 0){
+            this.width = 0;
+        }
+        else {
+            this.width = width;
         }
     }
 
+    public double getArea(){
+        double area = 0.0;
+        area = width * length;
+        return area;
+    }
+
+    public String toString(){
+        String descriptionOfRectangle = "";
+        descriptionOfRectangle = super.toString() + "This shape is a rectangle with length " 
+            + length + ", width " + width + ", area " + getArea() + ".";
+        return descriptionOfRectangle;
+    }
+
+    public boolean isSquare(){
+        if (width == length){
+            return true;
+        }
+        return false;
+    }
 
     
 
 
+}

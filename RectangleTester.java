@@ -9,6 +9,10 @@ public class RectangleTester {
         System.out.println("Perimeter: " + rect1.calculatePerimeter());
         System.out.println("Diagonal: " + rect1.calculateDiagonal());
         System.out.println(rect1.toString());
+
+
+
+        
         System.out.println("Equals: " + rect1.equals(rect2));
 
         System.out.println("Area: " + rect2.calculateArea());
@@ -17,7 +21,7 @@ public class RectangleTester {
 
         System.out.println("Area: " + rect3.calculateArea());
         System.out.println("Perimeter: " + rect3.calculatePerimeter());
-        System.out.println("Diagonal: " + rect3.calculateDiagonal());
+        System.out.println("Diagonal: " + rect3.calculateDiagonal());;
         
     }
 }

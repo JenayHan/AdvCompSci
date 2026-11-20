@@ -41,9 +41,9 @@ public class Student {
     }
 
     public boolean equals(Student other){
-        if (getName().equals(other.getName()) 
-            && getGrade() == other.getGrade()
-            && getId().equals(other.getId())) {
+        if (name.equals(other.name) 
+            && grade == other.grade
+            && id.equals(other.id)) {
                 return true;
             }
         return false;
